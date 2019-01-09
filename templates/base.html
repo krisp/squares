@@ -5,9 +5,27 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-{% for x in range(0,9) %}
- {% for y in range(0,9) %}
- {% endfor %}
+<div class="container">
+<h1>Superbowl 2019!</h1>
+<h3> <strong>TBD</strong> vs. <strong>TBD</strong> </h3>
+<div class="container">
+<table class="table table-striped text-center table-bordered">
+<thead>
+<tr>
+{% for x in range(0,11) %}
+ <th scope="col" style="width: 9%">{{grid[0][x]}}</th>
 {% endfor %}
+</tr>
+</thead>
+{% for x in range(1,11) %}
+ <tr><th scope="row" style="width: 9%">{{grid[x][0]}}</th>
+ {% for y in range(1,11) %}
+  <td style="width: 9%">{{grid[x][y]}}</td>
+ {% endfor %}
+ </tr>
+{% endfor %}
+</table>
+</div>
+</div>
 </body>
 </html>
